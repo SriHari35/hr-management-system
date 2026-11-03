@@ -39,4 +39,24 @@
       <label>Work email <input name="email" type="email"></label>
       <label>Employment type
         <select name="employmentType">
-          <option>Full-time
+          <option>Full-time</option>
+          <option>Part-time</option>
+          <option>Contract</option>
+        </select>
+      </label>
+      <p class="note">Demo only: this form does not save data. Do not enter real employee information.</p>
+      <div class="buttons">
+        <button type="submit">Preview form</button>
+        <a href="index.html">Back to dashboard</a>
+      </div>
+    </form>
+  </main>
+
+  <script>
+    document.querySelector("#employee-form").addEventListener("submit", function (event) {
+      event.preventDefault();
+      alert("Demo only: no employee record was saved.");
+    });
+  </script>
+</body>
+</html>
