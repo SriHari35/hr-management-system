@@ -413,3 +413,17 @@ th {
     width: 100%;
   }
 }
+.placeholder-panel {
+  min-height: 150px;
+}
+
+.placeholder-panel p {
+  margin: 10px 0 0;
+  color: #8290a3;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+tr[hidden] {
+  display: none;
+}
