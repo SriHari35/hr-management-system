@@ -115,4 +115,28 @@ function showPage(page) {
       employees,
       "Search employees..."
     );
-  } else if (page === "
+  } else if (page === "Attendance") {
+    content.innerHTML = tablePage(
+      "Attendance",
+      "Review fictional attendance records.",
+      ["Employee", "Department", "Check-in", "Check-out", "Status"],
+      attendance,
+      "Search attendance..."
+    );
+  } else {
+    content.innerHTML = placeholderPage(page);
+  }
+
+  setupSearch();
+}
+
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    navLinks.forEach((item) => item.classList.remove("active"));
+    link.classList.add("active");
+    showPage(link.dataset.page);
+  });
+});
+
+// Enable search on the Dashboard when the page first loads.
+setupSearch();
