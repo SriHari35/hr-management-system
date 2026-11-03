@@ -1,149 +1,141 @@
 <!doctype html>
 <html lang="en">
   <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta
-    name="description"
-    content="Sample HR dashboard demo for AAA College of Engineering and Technology."
-  />
-  <title>HR Dashboard | AAA College</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="app.js" defer></script>
-</head>
-<body>
-  <div class="app">
-    <aside class="sidebar">
-      <a class="brand" href="#" aria-label="AAA College HR home">
-        <span class="brand-mark">A</span>
-        <span>
-          <strong>AAA College</strong>
-          <small>Human Resources</small>
-        </span>
-      </a>
-<a class="primary-button" href="employee-form.html">＋ Add employee</a>
-      <nav class="navigation" aria-label="Main navigation">
-        <button class="nav-link active" data-page="Dashboard">▦ <span>Dashboard</span></button>
-        <button class="nav-link" data-page="Employees">♙ <span>Employees</span></button>
-        <button class="nav-link" data-page="Attendance">◷ <span>Attendance</span></button>
-        <button class="nav-link" data-page="Leave">▤ <span>Leave</span></button>
-        <button class="nav-link" data-page="Payroll">₹ <span>Payroll</span></button>
-      </nav>
-
-      <div class="sidebar-note">
-        <strong>Demo version</strong>
-        <p>Displays fictional sample data only.</p>
-      </div>
-    </aside>
-
-    <main class="main">
-      <header class="topbar">
-        <div>
-          <span class="topbar-label">AAA COLLEGE OF ENGINEERING AND TECHNOLOGY</span>
-          <h1 id="page-title">Dashboard</h1>
-        </div>
-        <div class="user-chip" aria-label="Signed in as demo HR administrator">
-          <span class="avatar">HR</span>
-          <span class="user-name">Demo Administrator</span>
-        </div>
-      </header>
-
-      <section class="content" aria-label="HR dashboard">
-        <div class="welcome-row">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HR Dashboard | AAA College</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar">
+        <div class="brand">
+          <span class="brand-mark">A</span>
           <div>
-            <h2>Staff overview</h2>
-            <p>Here’s a sample snapshot of college HR activity.</p>
+            <strong>AAA College</strong>
+            <small>Human Resources</small>
           </div>
-          <span class="date-pill">Sample data · 3 Nov 2026</span>
         </div>
 
-        <section class="stats" aria-label="HR summary">
-          <article class="stat-card">
-            <span class="stat-title">Total employees</span>
-            <strong>248</strong>
-            <span class="stat-foot">Across all departments</span>
-          </article>
-          <article class="stat-card">
-            <span class="stat-title">Present today</span>
-            <strong>216</strong>
-            <span class="stat-foot good">87% attendance</span>
-          </article>
-          <article class="stat-card">
-            <span class="stat-title">On leave</span>
-            <strong>12</strong>
-            <span class="stat-foot">Today</span>
-          </article>
-          <article class="stat-card">
-            <span class="stat-title">Pending requests</span>
-            <strong>8</strong>
-            <span class="stat-foot warning">Awaiting review</span>
-          </article>
-        </section>
+        <nav class="navigation">
+          <button class="nav-link active" data-page="Dashboard">▦ Dashboard</button>
+          <button class="nav-link" data-page="Employees">♙ Employees</button>
+          <button class="nav-link" data-page="Attendance">◷ Attendance</button>
+          <button class="nav-link" data-page="Leave">▤ Leave</button>
+          <button class="nav-link" data-page="Payroll">₹ Payroll</button>
+        </nav>
 
-        <section class="panel">
-          <div class="panel-heading">
+        <div class="sidebar-note">
+          <strong>Demo version</strong>
+          <p>Displays fictional sample data only.</p>
+        </div>
+      </aside>
+
+      <main class="main">
+        <header class="topbar">
+          <div>
+            <span class="topbar-label">AAA COLLEGE OF ENGINEERING AND TECHNOLOGY</span>
+            <h1 id="page-title">Dashboard</h1>
+          </div>
+          <div class="user-chip">
+            <span class="avatar">HR</span>
+            <span class="user-name">Demo Administrator</span>
+          </div>
+        </header>
+
+        <section class="content">
+          <div class="welcome-row">
             <div>
-              <h2>Recent leave requests</h2>
-              <p>Fictional requests for demonstration</p>
+              <h2>Staff overview</h2>
+              <p>Here’s a sample snapshot of college HR activity.</p>
             </div>
-            <label class="search">
-              <span class="visually-hidden">Search requests</span>
-              <input id="request-search" type="search" placeholder="Search requests..." />
-            </label>
+            <a class="primary-button" href="employee-form.html">＋ Add employee</a>
           </div>
 
-          <div class="table-wrap">
-            <table>
-              <thead>
-                <tr>
-                  <th>Employee</th>
-                  <th>Department</th>
-                  <th>Leave type</th>
-                  <th>Dates</th>
-                  <th>Status</th>
-                </tr>
-              </thead>
-              <tbody id="requests-table">
-                <tr>
-                  <td><span class="employee"><span class="person-avatar blue">RK</span>R. Karthik</span></td>
-                  <td>Computer Science</td>
-                  <td>Casual leave</td>
-                  <td>04–05 Nov</td>
-                  <td><span class="status pending">Pending</span></td>
-                </tr>
-                <tr>
-                  <td><span class="employee"><span class="person-avatar peach">SP</span>S. Priya</span></td>
-                  <td>Administration</td>
-                  <td>Medical leave</td>
-                  <td>06 Nov</td>
-                  <td><span class="status pending">Pending</span></td>
-                </tr>
-                <tr>
-                  <td><span class="employee"><span class="person-avatar green">AM</span>A. Manikandan</span></td>
-                  <td>Mechanical</td>
-                  <td>Casual leave</td>
-                  <td>09–10 Nov</td>
-                  <td><span class="status approved">Approved</span></td>
-                </tr>
-                <tr>
-                  <td><span class="employee"><span class="person-avatar lilac">NV</span>N. Vidhya</span></td>
-                  <td>Electrical</td>
-                  <td>Earned leave</td>
-                  <td>12 Nov</td>
-                  <td><span class="status rejected">Rejected</span></td>
-                </tr>
-              </tbody>
-            </table>
-            <p id="no-results" class="no-results" hidden>No matching requests found.</p>
-          </div>
+          <section class="stats">
+            <article class="stat-card">
+              <span class="stat-title">Total employees</span>
+              <strong>248</strong>
+              <span class="stat-foot">Across all departments</span>
+            </article>
+            <article class="stat-card">
+              <span class="stat-title">Present today</span>
+              <strong>216</strong>
+              <span class="stat-foot good">87% attendance</span>
+            </article>
+            <article class="stat-card">
+              <span class="stat-title">On leave</span>
+              <strong>12</strong>
+              <span class="stat-foot">Today</span>
+            </article>
+            <article class="stat-card">
+              <span class="stat-title">Pending requests</span>
+              <strong>8</strong>
+              <span class="stat-foot warning">Awaiting review</span>
+            </article>
+          </section>
+
+          <section class="panel">
+            <div class="panel-heading">
+              <div>
+                <h2>Recent leave requests</h2>
+                <p>Fictional requests for demonstration</p>
+              </div>
+              <label class="search">
+                <input id="request-search" type="search" placeholder="Search requests..." />
+              </label>
+            </div>
+
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Employee</th>
+                    <th>Department</th>
+                    <th>Leave type</th>
+                    <th>Dates</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody id="requests-table">
+                  <tr>
+                    <td><span class="employee"><span class="person-avatar blue">RK</span>R. Karthik</span></td>
+                    <td>Computer Science</td>
+                    <td>Casual leave</td>
+                    <td>04–05 Nov</td>
+                    <td><span class="status pending">Pending</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="employee"><span class="person-avatar peach">SP</span>S. Priya</span></td>
+                    <td>Administration</td>
+                    <td>Medical leave</td>
+                    <td>06 Nov</td>
+                    <td><span class="status pending">Pending</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="employee"><span class="person-avatar green">AM</span>A. Manikandan</span></td>
+                    <td>Mechanical</td>
+                    <td>Casual leave</td>
+                    <td>09–10 Nov</td>
+                    <td><span class="status approved">Approved</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="employee"><span class="person-avatar lilac">NV</span>N. Vidhya</span></td>
+                    <td>Electrical</td>
+                    <td>Earned leave</td>
+                    <td>12 Nov</td>
+                    <td><span class="status rejected">Rejected</span></td>
+                  </tr>
+                </tbody>
+              </table>
+              <p id="no-results" class="no-results" hidden>No matching requests found.</p>
+            </div>
+          </section>
+
+          <p class="demo-warning">Demo only: no login, database, or backend. Do not enter real employee data.</p>
         </section>
-
-        <p class="demo-warning">
-          Demo only: this static site has no login, backend, database, or real approval workflow.
-          Do not enter or publish personal or employee information.
-        </p>
-      </section>
-    </main>
-  </div>
-</body>
+      </main>
+    </div>
+  </body>
 </html>
