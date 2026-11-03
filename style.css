@@ -427,3 +427,54 @@ th {
 tr[hidden] {
   display: none;
 }
+.payroll-summary {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.pay-summary-card {
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #e8ebf1;
+  border-radius: 12px;
+}
+
+.pay-summary-card span,
+.pay-summary-card small {
+  display: block;
+  color: #8290a3;
+  font-size: 11px;
+}
+
+.pay-summary-card strong {
+  display: block;
+  margin: 10px 0 5px;
+  font-size: 24px;
+}
+
+.action-button {
+  margin: 2px;
+  padding: 6px 8px;
+  border: 0;
+  border-radius: 6px;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.approve-button {
+  color: #237b58;
+  background: #e9f7ef;
+}
+
+.reject-button {
+  color: #b34747;
+  background: #fff0f0;
+}
+
+@media (max-width: 700px) {
+  .payroll-summary {
+    grid-template-columns: 1fr;
+  }
+}
